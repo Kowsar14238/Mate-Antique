@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Antique</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Google Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- Daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FlowBite -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <style>
+      .dotted-hr {
+        border-top: dotted 1px black;
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Spinner or Loader -->
+    <div id="loader" class="flex flex-wrap justify-center items-center">
+      <span class="loading loading-ball loading-xs"></span>
+      <span class="loading loading-ball loading-sm"></span>
+      <span class="loading loading-ball loading-md"></span>
+      <span class="loading loading-ball loading-lg"></span>
+    </div>
+
+    <!-- Body Contents Start -->
+    <div id="content" class="hidden">
+      <head class="">
+        <div class="navbar bg-base-100 px-10">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"/>
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <ul class="menu menu-horizontal px-1">
+                  <li
+                    class="tooltip tooltip-bottom bg-[#12132d13] rounded-full mr-2"
+                    data-tip="Home"
+                  >
+                    <a><i class="fa-solid fa-house"></i></a>
+                  </li>
+                  <li
+                    class="tooltip tooltip-bottom bg-[#12132d13] rounded-full mr-2"
+                    data-tip="Edit"
+                  >
+                    <a><i class="fa-solid fa-pen"></i></a>
+                  </li>
+                  <li
+                    class="tooltip tooltip-bottom bg-[#12132d13] rounded-full mr-2"
+                    data-tip="Add"
+                  >
+                    <a><i class="fa-solid fa-user-plus"></i></a>
+                  </li>
+                  <li
+                    class="tooltip tooltip-bottom bg-[#12132d13] rounded-full"
+                    data-tip="Flag"
+                  >
+                    <a><i class="fa-regular fa-flag"></i></a>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+            <a class="btn btn-ghost text-2xl font-bold">AntiQue</a>
+          </div>
+          <div class="navbar-end hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li
+                class="tooltip tooltip-bottom bg-[#12132d13] rounded-full mr-2"
+                data-tip="Home"
+              >
+                <a><i class="fa-solid fa-house"></i></a>
+              </li>
+              <li
+                class="tooltip tooltip-bottom bg-[#12132d13] rounded-full mr-2"
+                data-tip="Edit"
+              >
+                <a><i class="fa-solid fa-pen"></i></a>
+              </li>
+              <li
+                class="tooltip tooltip-bottom bg-[#12132d13] rounded-full mr-2"
+                data-tip="Add"
+              >
+                <a><i class="fa-solid fa-user-plus"></i></a>
+              </li>
+              <li
+                class="tooltip tooltip-bottom bg-[#12132d13] rounded-full"
+                data-tip="Flag"
+              >
+                <a><i class="fa-regular fa-flag"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a class="btn bg-[#797DFC] text-white rounded-full lg:px-7 md:px-5">Sign In</a>
+          </div>
+        </div>
+      </head>
+  
+      <main class="px-10">
+        <!-- Top Banner Section Start -->
+        <section id="top-banner" class="mt-7">
+          <div class="mb-8">
+            <div class="card w-full bg-black shadow-xl image-full">
+                <figure><img src="./images/bgbanner.png" alt="" /></figure>                      
+                <div class="card-body p-20">
+                  <h1 class="text-4xl text-white font-bold pb-5">Welcome to the <br> <span class="text-[#797DFC]">AntiQui</span> Forum</h1>
+                  <p class="pb-4">Share your favorite opinion and win and wp <br> forum coffee mug!</p>
+  
+                  <label class="input input-bordered flex items-center gap-2 w-80 rounded-full">
+                    <input id="userSearchField" type="text" class="border-none rounded-full text-black" placeholder="Search here anything" />
+                    <button onclick="handleSearch()" id="searchButton" class="btn text-xl font-semi-bold text-white h-10 bg-[#797DFC] rounded-full cursor-pointer">Search</button>
+                  </label>
+  
+                  <div class="absolute bottom-[80px] right-12 bg-white w-[450px] h-36 rounded-lg px-2 py-3 flex justify-center items-center">
+                    <table class="text-[#12132dbf] text-l text-left">
+                      <tr>
+                        <td class="pr-5 pb-2">Registered Users</td>
+                        <td>01</td>
+                      </tr>
+                      <tr>
+                        <td>Forum</td>
+                        <td>05</td>
+                      </tr>
+                      <tr>
+                        <td>Topics</td>
+                        <td>01</td>
+                      </tr>
+                      <tr>
+                        <td>Replies</td>
+                        <td>01</td>
+                      </tr>
+                    </table>
+                  </div>              
+                </div>
+              </div>
+          </div>
+        </section>
+        <!-- Top Banner Section End -->
+  
+        <!-- Discuss Section Start -->
+        <section id="discuss" class="flex flex-col items-center justify-center">
+          <div id="discuss-head" class="flex flex-col items-center justify-center text-center">
+            <h1 class="font-bold text-2xl my-2">Let's Discuss</h1>
+            <p class="lg:mx-[10%] text-[#12132d94] mb-2">
+              Yes, you can run unit tests and view the results directly within the
+              app. The integrated testing features allow for a streamlined .
+            </p>
+          </div>
+          <div class="flex lg:flex-row gap-5 my-5">
+            <!-- User discussion Card Start -->
+            <div id="userAllPost" class="grid grid-flow-row gap-3">
+  
+            </div>
+            <!-- User discussion Card End -->
+  
+            <!-- Add Discussion by user part Start -->
+            <div id="discuss-add" class="bg-[#12132d0a] p-5 flex flex-col">
+              <div class="flex flex-row justify-between">
+                  <h2 class="font-bold">Title</h2>
+                  <div class="flex flex-row">
+                    <span class="material-symbols-outlined text-green-500">done_all</span>
+                    <p>Mark as read ( <span>4</span>)</p>
+                  </div>
+              </div>
+              <div id="add-to-cart" class="cart-info flex flex-col gap-5 bg-white p-3 my-3 rounded-2xl">
+                
+              </div>
+            </div>
+            <!-- Add Discussion by user part End -->
+          </div>
+        </section>
+        <!-- Discuss Section End -->
+  
+        <!-- Last Banner Section Start -->
+        <section id="last-banner">
+          <div class="mb-8">
+            <div class="card w-full bg-black image-full">
+                <div class="card-body p-20">
+                  <h1 class="text-3xl text-white font-bold pb-5">Join Our Forum</h1>
+                  <p class="mr-[35%]">Share your favorite opinion and win and wp forum coffee mug! Yes, you can run unit tests and view the results directly within the app.</p>
+                  <button class="btn sm:btn-sm md:btn-md lg:btn-xl bg-[#797DFC] max-w-40 rounded-full">Registered Now</button>
+                </div>
+                <div class="flex flex-row-reverse">
+                  <img src="./images/joinforum.png" alt="" />
+                </div>
+              </div>
+          </div>
+        </section>
+        <!-- Last Banner Section End -->
+  
+        <!-- Latest Post Start-->
+        <section id="latest-post" class="">
+          <div class="flex flex-col justify-center items-center mx-[30%] text-center my-6">
+            <h1 class="text-2xl font-bold my-3">Latest Posts</h1>
+            <p>Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+          </div>
+          <div id="userLatestPost" class="grid grid-flow-col justify-around items-center">
+  
+          </div>
+          <!-- Latest Post Card End -->
+        </section>
+        <!-- Latest Post End-->
+      </main>
+  
+      <!-- Footer Start -->
+      <footer class="footer footer-center p-10 bg-[#12132d18] text-black">
+        <aside class="flex flex-col items-center justify-center lg:mx-[35%]">
+          <h1 class="font-bold text-xl">AntiQue</h1>
+          <p class="text-[#12132da0]">
+            Our platform offers a blend of antic charm and modern convenience,
+            appealing to vintage lovers and contemporary users alike.
+          </p>
+        </aside>
+        <nav>
+          <div class="grid grid-flow-col gap-4">
+            <a href="">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </nav>
+        <hr class="dotted-hr">
+        <p>Copyright © 2024 - All right reserved</p>
+      </footer>
+    </div>
+    
+    <!-- Footer End -->
+    <!-- FlowBite -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <!-- Script Connection -->
+    <script src="./js/fetchData.js"></script>
+    <script src="./js/displayAllPost.js"></script>
+    <script src="./js/displayLatestPosts.js"></script>
+    <script src="./js/searchData.js"></script>
+    <script src="./js/loadingEffect.js"></script>
+    <script src="./js/addCart.js"></script>
+  </body>
+</html>
